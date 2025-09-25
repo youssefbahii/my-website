@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Protected Photo Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #121212; /* dark background */
+      color: #f0f0f0; /* light text */
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+
+    input {
+      background-color: #1e1e1e;
+      color: #fff;
+      border: 1px solid #333;
+    }
+
+    button {
+      background-color: #3a3a3a;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    #gallery {
+      display: none;
+      margin-top: 20px;
+    }
+
+    img {
+      max-width: 400px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+
+    h2, h3 {
+      color: #ffcc00; /* golden highlight */
+    }
+  </style>
+</head>
+<body>
+  <h2>Search for the "Jurassic Era" Password in the Poster</h2>
+  <input type="password" id="password" placeholder="Enter password">
+  <button onclick="checkPassword()">Submit</button>
+
+  <div id="gallery">
+    <h3>Short Story</h3>
+    <!-- Replace these with your own photo links -->
+    <img src="https://i.postimg.cc/PxHSjMJ9/Joe.jpg" alt="Photo">
+
+  </div>
+
+  <script>
+    function checkPassword() {
+      let pass = document.getElementById("password").value;
+      if (pass === "1730") {  // change "1234" to your password
+        document.getElementById("gallery").style.display = "block";
+      } else {
+        alert("Wrong password!");
+      }
+    }
+  </script>
+</body>
+</html>
